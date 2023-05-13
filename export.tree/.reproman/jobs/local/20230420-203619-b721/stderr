@@ -1,0 +1,8 @@
+WARNING (04/20/23 20:36:47): LAUNCHER_WORKDIR variable not set. Using current directory.
+using /tmp/launcher.5408012.hostlist.63wxKxAY to get hosts
+starting job on c209-019
+slurmstepd: error: *** JOB 5408012 ON c209-019 CANCELLED AT 2023-04-21T02:06:51 ***
+Killed by signal 15.
+Terminated
+Access denied: user jbwexler (uid=825002) has no active jobs on this node.
+Authentication failed.

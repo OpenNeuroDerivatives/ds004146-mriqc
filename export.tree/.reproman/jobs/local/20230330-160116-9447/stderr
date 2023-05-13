@@ -1,0 +1,54 @@
+Warning: Permanently added 'c152-191' (ECDSA) to the list of known hosts.
+WARNING (04/01/23 19:16:57): LAUNCHER_WORKDIR variable not set. Using current directory.
+using /tmp/launcher.5362730.hostlist.vW9Ui02A to get hosts
+starting job on c152-191
+starting job on c152-194
+starting job on c152-202
+starting job on c153-034
+starting job on c153-171
+starting job on c154-022
+starting job on c154-052
+starting job on c154-071
+starting job on c154-074
+starting job on c154-204
+starting job on c154-213
+starting job on c155-013
+starting job on c155-043
+starting job on c155-062
+starting job on c155-084
+starting job on c155-114
+starting job on c155-134
+starting job on c155-142
+starting job on c155-153
+starting job on c155-211
+starting job on c156-042
+starting job on c156-052
+starting job on c156-073
+starting job on c156-082
+starting job on c156-114
+starting job on c156-133
+starting job on c156-143
+starting job on c156-164
+starting job on c156-182
+starting job on c156-193
+starting job on c157-022
+starting job on c157-032
+starting job on c157-034
+starting job on c157-043
+starting job on c157-052
+starting job on c157-074
+starting job on c157-104
+starting job on c157-123
+starting job on c157-163
+starting job on c157-212
+slurmstepd: error: *** JOB 5362730 ON c152-191 CANCELLED AT 2023-04-01T23:03:30 ***
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Killed by signal 15.
+Terminated

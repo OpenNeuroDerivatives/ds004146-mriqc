@@ -1,0 +1,266 @@
+[ReproMan] pre-command...
+[ReproMan] executing command code/containers/scripts/singularity_cmd run code/containers/images/bids/bids-mriqc--23.0.1.sing sourcedata/raw /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds004146-mriqc participant --participant-label '0296' -w '/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296' -vv --nprocs 11 --ants-nthreads 8 --verbose-reports --dsname ds004146 --ica --mem_gb 30
+[ReproMan] ... within /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds004146-mriqc
+230402-00:19:22,793 cli IMPORTANT:
+	 
+    Running MRIQC version 23.0.1:
+      * BIDS dataset path: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds004146-mriqc/sourcedata/raw.
+      * Output folder: /scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds004146-mriqc.
+      * Analysis levels: ['participant'].
+
+230402-00:19:22,973 nipype.workflow INFO:
+	 Building anatomical MRIQC workflow (</scratch1/03201/jbwexler/openneuro_derivatives/derivatives/mriqc/ds004146-mriqc/sourcedata/raw/sub-0296/ses-01/anat/sub-0296_ses-01_T2w.nii.gz>)..
+230402-00:20:24,527 cli WARNING:
+	 IMPORTANT: Anonymized quality metrics (IQMs) will be submitted to MRIQC's metrics repository. Submission of IQMs can be disabled using the ``--no-sub`` argument. Please visit https://mriqc.readthedocs.io/en/latest/dsa.html to revise MRIQC's Data Sharing Agreement.
+230402-00:20:24,661 nipype.workflow INFO:
+	 Workflow mriqc_wf settings: ['check', 'execution', 'logging', 'monitoring']
+230402-00:20:24,825 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.datalad_get" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/datalad_get".
+230402-00:20:24,833 nipype.workflow INFO:
+	 [Node] Executing "datalad_get" <mriqc.interfaces.datalad.DataladIdentityInterface>
+230402-00:20:24,850 nipype.interface INFO:
+	 Datalad interface without dataset path defined.
+230402-00:20:24,851 nipype.workflow INFO:
+	 [Node] Finished "datalad_get", elapsed time 0.000458s.
+230402-00:20:26,832 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.conform" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/conform".
+230402-00:20:26,841 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.metadata" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/metadata".
+230402-00:20:27,464 nipype.workflow INFO:
+	 [Node] Executing "metadata" <niworkflows.interfaces.bids.ReadSidecarJSON>
+230402-00:20:27,470 nipype.workflow INFO:
+	 [Node] Executing "conform" <mriqc.interfaces.common.conform_image.ConformImage>
+230402-00:20:27,499 nipype.workflow INFO:
+	 [Node] Finished "metadata", elapsed time 0.017354s.
+230402-00:20:28,693 nipype.workflow INFO:
+	 [Node] Finished "conform", elapsed time 1.221754s.
+230402-00:20:30,787 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.pre_clip" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/pre_clip".
+230402-00:20:30,788 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.AirMaskWorkflow.RotationMask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/AirMaskWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/RotationMask".
+230402-00:20:30,795 nipype.workflow INFO:
+	 [Node] Executing "pre_clip" <niworkflows.interfaces.nibabel.IntensityClip>
+230402-00:20:30,797 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotMosaicNoise" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotMosaicNoise".
+230402-00:20:30,808 nipype.workflow INFO:
+	 [Node] Executing "PlotMosaicNoise" <nireports.interfaces.mosaic.PlotMosaic>
+230402-00:20:30,830 nipype.workflow INFO:
+	 [Node] Executing "RotationMask" <mriqc.interfaces.anatomical.RotationMask>
+230402-00:20:37,484 nipype.workflow INFO:
+	 [Node] Finished "RotationMask", elapsed time 6.652528s.
+230402-00:20:38,263 nipype.workflow INFO:
+	 [Node] Finished "PlotMosaicNoise", elapsed time 7.440245s.
+230402-00:20:50,729 nipype.workflow INFO:
+	 [Node] Finished "pre_clip", elapsed time 19.932935s.
+230402-00:20:52,836 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.pre_n4" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/pre_n4".
+230402-00:20:52,844 nipype.workflow INFO:
+	 [Node] Executing "pre_n4" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+230402-00:21:40,714 nipype.workflow INFO:
+	 [Node] Finished "pre_n4", elapsed time 47.6591s.
+230402-00:21:40,895 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.synthstrip" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/synthstrip".
+230402-00:21:40,903 nipype.workflow INFO:
+	 [Node] Executing "synthstrip" <mriqc.interfaces.synthstrip.SynthStrip>
+230402-00:23:04,335 nipype.workflow INFO:
+	 [Node] Finished "synthstrip", elapsed time 83.430781s.
+230402-00:23:05,29 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.smoothness" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/smoothness".
+230402-00:23:05,30 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotMosaicZoomed" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotMosaicZoomed".
+230402-00:23:05,30 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.post_n4" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/post_n4".
+230402-00:23:05,38 nipype.workflow INFO:
+	 [Node] Executing "PlotMosaicZoomed" <nireports.interfaces.mosaic.PlotMosaic>
+230402-00:23:05,38 nipype.workflow INFO:
+	 [Node] Executing "smoothness" <nipype.interfaces.afni.utils.FWHMx>
+230402-00:23:05,39 nipype.workflow INFO:
+	 [Node] Executing "post_n4" <nipype.interfaces.ants.segmentation.N4BiasFieldCorrection>
+230402-00:23:05,39 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotBrainmask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotBrainmask".
+230402-00:23:05,52 nipype.workflow INFO:
+	 [Node] Executing "PlotBrainmask" <nireports.interfaces.mosaic.PlotContours>
+230402-00:23:10,67 nipype.workflow INFO:
+	 [Node] Finished "PlotBrainmask", elapsed time 5.000407s.
+230402-00:23:11,653 nipype.workflow INFO:
+	 [Node] Finished "PlotMosaicZoomed", elapsed time 6.613923s.
+230402-00:23:13,750 nipype.workflow INFO:
+	 [Node] Finished "smoothness", elapsed time 8.710496s.
+230402-00:23:20,682 nipype.workflow INFO:
+	 [Node] Finished "post_n4", elapsed time 15.406282s.
+230402-00:23:21,45 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.final_inu" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/final_inu".
+230402-00:23:21,45 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.synthstrip_wf.final_masked" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/synthstrip_wf/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/final_masked".
+230402-00:23:21,46 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.SpatialNormalization.SpatialNormalization" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/SpatialNormalization/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/SpatialNormalization".
+230402-00:23:21,47 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.HeadMaskWorkflow.fsl_bet" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/HeadMaskWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/fsl_bet".
+230402-00:23:21,53 nipype.workflow INFO:
+	 [Node] Executing "final_masked" <niworkflows.interfaces.nibabel.ApplyMask>
+230402-00:23:21,53 nipype.workflow INFO:
+	 [Node] Executing "final_inu" <nipype.interfaces.utility.wrappers.Function>
+230402-00:23:21,56 nipype.workflow INFO:
+	 [Node] Executing "SpatialNormalization" <niworkflows.interfaces.reportlets.registration.SpatialNormalizationRPT>
+230402-00:23:21,164 nipype.workflow INFO:
+	 [Node] Executing "fsl_bet" <nipype.interfaces.fsl.preprocess.BET>
+230402-00:23:21,848 nipype.workflow INFO:
+	 [Node] Finished "final_masked", elapsed time 0.794358s.
+230402-00:23:23,48 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.segmentation" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/segmentation".
+230402-00:23:23,57 nipype.workflow INFO:
+	 [Node] Executing "segmentation" <nipype.interfaces.fsl.preprocess.FAST>
+230402-00:23:23,596 nipype.workflow INFO:
+	 [Node] Finished "final_inu", elapsed time 2.541878s.
+230402-00:24:16,115 nipype.workflow INFO:
+	 [Node] Finished "SpatialNormalization", elapsed time 55.058826s.
+230402-00:24:17,109 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.AirMaskWorkflow.invert_xfm" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/AirMaskWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/invert_xfm".
+230402-00:24:17,118 nipype.workflow INFO:
+	 [Node] Executing "invert_xfm" <nipype.interfaces.ants.resampling.ApplyTransforms>
+230402-00:24:19,111 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t10" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t10".
+230402-00:24:19,118 nipype.workflow INFO:
+	 [Node] Executing "_MNItpms2t10" <nipype.interfaces.ants.resampling.ApplyTransforms>
+230402-00:24:19,121 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t11" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t11".
+230402-00:24:19,129 nipype.workflow INFO:
+	 [Node] Executing "_MNItpms2t11" <nipype.interfaces.ants.resampling.ApplyTransforms>
+230402-00:24:19,131 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t12" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t12".
+230402-00:24:19,141 nipype.workflow INFO:
+	 [Node] Executing "_MNItpms2t12" <nipype.interfaces.ants.resampling.ApplyTransforms>
+230402-00:24:21,109 nipype.workflow INFO:
+	 [Node] Finished "_MNItpms2t10", elapsed time 1.989869s.
+230402-00:24:21,297 nipype.workflow INFO:
+	 [Node] Finished "_MNItpms2t11", elapsed time 1.9670860000000001s.
+230402-00:24:21,948 nipype.workflow INFO:
+	 [Node] Finished "_MNItpms2t12", elapsed time 2.612068s.
+230402-00:24:23,128 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t10" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t10".
+230402-00:24:23,130 nipype.workflow INFO:
+	 [Node] Cached "_MNItpms2t10" - collecting precomputed outputs
+230402-00:24:23,130 nipype.workflow INFO:
+	 [Node] "_MNItpms2t10" found cached.
+230402-00:24:23,131 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t11" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t11".
+230402-00:24:23,133 nipype.workflow INFO:
+	 [Node] Cached "_MNItpms2t11" - collecting precomputed outputs
+230402-00:24:23,133 nipype.workflow INFO:
+	 [Node] "_MNItpms2t11" found cached.
+230402-00:24:23,134 nipype.workflow INFO:
+	 [Node] Setting-up "_MNItpms2t12" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MNItpms2t1/mapflow/_MNItpms2t12".
+230402-00:24:23,135 nipype.workflow INFO:
+	 [Node] Cached "_MNItpms2t12" - collecting precomputed outputs
+230402-00:24:23,136 nipype.workflow INFO:
+	 [Node] "_MNItpms2t12" found cached.
+230402-00:25:05,688 nipype.workflow INFO:
+	 [Node] Finished "fsl_bet", elapsed time 104.522235s.
+230402-00:25:11,220 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotHeadmask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotHeadmask".
+230402-00:25:11,400 nipype.workflow INFO:
+	 [Node] Executing "PlotHeadmask" <nireports.interfaces.mosaic.PlotContours>
+230402-00:25:15,962 nipype.workflow INFO:
+	 [Node] Finished "PlotHeadmask", elapsed time 4.561107s.
+230402-00:26:42,469 nipype.workflow INFO:
+	 [Node] Finished "invert_xfm", elapsed time 145.153183s.
+230402-00:26:43,399 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.AirMaskWorkflow.ArtifactMask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/AirMaskWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/ArtifactMask".
+230402-00:26:43,409 nipype.workflow INFO:
+	 [Node] Executing "ArtifactMask" <mriqc.interfaces.anatomical.ArtifactMask>
+230402-00:26:49,448 nipype.workflow INFO:
+	 [Node] Finished "ArtifactMask", elapsed time 6.038332s.
+230402-00:26:51,402 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.provenance" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/provenance".
+230402-00:26:51,410 nipype.workflow INFO:
+	 [Node] Executing "provenance" <mriqc.interfaces.reports.AddProvenance>
+230402-00:26:51,583 nipype.workflow INFO:
+	 [Node] Finished "provenance", elapsed time 0.159459s.
+230402-00:26:51,713 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.ComputeQI2" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/ComputeQI2".
+230402-00:26:51,713 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotArtmask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotArtmask".
+230402-00:26:51,713 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotAirmask" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotAirmask".
+230402-00:26:51,721 nipype.workflow INFO:
+	 [Node] Executing "ComputeQI2" <mriqc.interfaces.anatomical.ComputeQI2>
+230402-00:26:51,722 nipype.workflow INFO:
+	 [Node] Executing "PlotArtmask" <nireports.interfaces.mosaic.PlotContours>
+230402-00:26:51,722 nipype.workflow INFO:
+	 [Node] Executing "PlotAirmask" <nireports.interfaces.mosaic.PlotContours>
+230402-00:26:56,182 nipype.workflow INFO:
+	 [Node] Finished "PlotArtmask", elapsed time 4.459392s.
+230402-00:26:56,325 nipype.workflow INFO:
+	 [Node] Finished "PlotAirmask", elapsed time 4.602392s.
+230402-00:27:06,731 nipype.workflow INFO:
+	 [Node] Finished "ComputeQI2", elapsed time 15.008646s.
+230402-00:30:30,198 nipype.workflow INFO:
+	 [Node] Finished "segmentation", elapsed time 427.140026s.
+230402-00:30:31,954 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.harmonize" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/harmonize".
+230402-00:30:31,954 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.PlotSegmentation" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/PlotSegmentation".
+230402-00:30:31,962 nipype.workflow INFO:
+	 [Node] Executing "harmonize" <mriqc.interfaces.anatomical.Harmonize>
+230402-00:30:31,962 nipype.workflow INFO:
+	 [Node] Executing "PlotSegmentation" <nireports.interfaces.mosaic.PlotContours>
+230402-00:30:33,801 nipype.workflow INFO:
+	 [Node] Finished "harmonize", elapsed time 1.838322s.
+230402-00:30:37,262 nipype.workflow INFO:
+	 [Node] Finished "PlotSegmentation", elapsed time 5.2985050000000005s.
+230402-00:30:41,978 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.measures" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/measures".
+230402-00:30:41,978 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.MergePlots" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/MergePlots".
+230402-00:30:41,992 nipype.workflow INFO:
+	 [Node] Executing "MergePlots" <nipype.interfaces.utility.base.Merge>
+230402-00:30:41,992 nipype.workflow INFO:
+	 [Node] Finished "MergePlots", elapsed time 0.000222s.
+230402-00:30:41,993 nipype.workflow INFO:
+	 [Node] Executing "measures" <mriqc.interfaces.anatomical.StructuralQC>
+230402-00:30:45,1 nipype.interface WARNING:
+	 Estimated signal variation in the background was too small (MAD=0.0, sigma=65.68874490164224)
+230402-00:30:45,2 nipype.interface WARNING:
+	 Estimated signal variation in the background was too small (MAD=0.0, sigma=65.68874490164224)
+230402-00:30:45,2 nipype.interface WARNING:
+	 Estimated signal variation in the background was too small (MAD=0.0, sigma=65.68874490164224)
+230402-00:30:53,361 nipype.workflow INFO:
+	 [Node] Finished "measures", elapsed time 11.366196s.
+230402-00:30:54,10 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ComputeIQMs.datasink" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ComputeIQMs/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/datasink".
+230402-00:30:54,31 nipype.workflow INFO:
+	 [Node] Executing "datasink" <mriqc.interfaces.bids.IQMFileSink>
+230402-00:30:54,35 nipype.workflow INFO:
+	 [Node] Finished "datasink", elapsed time 0.003289s.
+230402-00:30:56,13 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.GenerateReport" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/GenerateReport".
+230402-00:30:56,14 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.UploadMetrics" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/UploadMetrics".
+230402-00:30:56,21 nipype.workflow INFO:
+	 [Node] Executing "UploadMetrics" <mriqc.interfaces.webapi.UploadIQMs>
+230402-00:30:56,22 nipype.interface INFO:
+	 MRIQC Web API: submitting to <https://mriqc.nimh.nih.gov:443/api/v1/T2w>
+230402-00:30:56,23 nipype.workflow INFO:
+	 [Node] Executing "GenerateReport" <mriqc.interfaces.reports.IndividualReport>
+230402-00:30:56,164 cli INFO:
+	 Generated individual log: /scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/GenerateReport/sub-0296_ses-01_T2w.html
+230402-00:30:56,165 nipype.workflow INFO:
+	 [Node] Finished "GenerateReport", elapsed time 0.141261s.
+230402-00:30:56,274 nipype.interface INFO:
+	 QC metrics successfully uploaded.
+230402-00:30:56,275 nipype.workflow INFO:
+	 [Node] Finished "UploadMetrics", elapsed time 0.252645s.
+230402-00:30:58,19 nipype.workflow INFO:
+	 [Node] Setting-up "mriqc_wf.anatMRIQC.ReportsWorkflow.dsplots" in "/scratch1/03201/jbwexler/work_dir/mriqc/ds004146_sub-0296/mriqc_wf/anatMRIQC/ReportsWorkflow/_in_file_..scratch1..03201..jbwexler..openneuro_derivatives..derivatives..mriqc..ds004146-mriqc..sourcedata..raw..sub-0296..ses-01..anat..sub-0296_ses-01_T2w.nii.gz/dsplots".
+230402-00:30:58,27 nipype.workflow INFO:
+	 [Node] Executing "dsplots" <nipype.interfaces.io.DataSink>
+230402-00:30:58,122 nipype.workflow INFO:
+	 [Node] Finished "dsplots", elapsed time 0.094435s.
+230402-00:30:59,955 cli WARNING:
+	 IMPORTANT: Anonymized quality metrics (IQMs) will be submitted to MRIQC's metrics repository. Submission of IQMs can be disabled using the ``--no-sub`` argument. Please visit https://mriqc.readthedocs.io/en/latest/dsa.html to revise MRIQC's Data Sharing Agreement.
+230402-00:30:59,955 cli IMPORTANT:
+	 Participant level finished successfully.
+230402-00:30:59,955 cli INFO:
+	 Generating BIDS derivatives metadata.
+230402-00:30:59,958 cli INFO:
+	 MRIQC completed.
